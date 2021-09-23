@@ -15,6 +15,10 @@ function runCmake (opts, target, cb) {
 
     if (opts.debug) args.push('--debug')
 
+    // Just get this working
+    args.push('--target');
+    args.push('install');
+
     var foundRest = false
     for (var arg of opts.argv) {
       if (arg === '--') {
